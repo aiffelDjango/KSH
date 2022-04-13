@@ -6,7 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'firstproject.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.settings') # 폴더 바꾸면 여길 바꿔야함 
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
