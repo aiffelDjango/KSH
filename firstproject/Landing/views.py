@@ -5,3 +5,6 @@ from django.shortcuts import render
 
 def index(request):
     return render(request,'Landing/index.html')
+
+def study(req):
+    return render(req,'Landing/study.html')

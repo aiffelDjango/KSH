@@ -21,4 +21,5 @@ import Landing.views  # import the include()?
 urlpatterns = [
     path('admin/', admin.site.urls),  # 이 링크로 간다.
     path('Landing/', include('Landing.urls')),
+    path('study',Landing.views.study,name="study"),
 ]
