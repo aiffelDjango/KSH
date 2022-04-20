@@ -13,9 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from xml.etree.ElementInclude import include
 from django.contrib import admin
 from django.urls import path
+import Landing.views  # import the include()? 
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # 이 링크로 간다.
+    path('Landing/', include('Landing.urls')),
 ]
