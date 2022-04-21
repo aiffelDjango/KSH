@@ -1,51 +1,173 @@
-<!DOCTYPE html>   
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+
+
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+<!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel = "stylesheet" href = "{% static 'css/main.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+    </style>
+    <title>PortFolio</title>
 </head>
 <body>
-    <h1> hello world!</h1>
 
-<h1>h1</h1>
-<h2>h2</h2>
-<h3>h3</h3>
-<h4>h4</h4>
-<h5>h5</h5>
-<h6>h6</h6>
+    <div id="container">
+        <nav >
+            <ul>
+                <li><a href = "#Home"><b>Home</b></a></li>
+                <li><a href = "#About"><b>About</b></a></li>
+                <li><a href = "#Gallery"><b>Gallery</b></a></li>
+                <li><a href = "#Contact"><b>Contact</b></a></li>
+            </ul>
+        </nav>
 
-<!-- {% load static %}
-<img src="{%static 'IU.jpg'%}" alt="iu"> -->
-<img src="../../static/IU.jpg" alt="iu">
+        <div id="Home" class="listItem">
+            <span class="profile"><img src="{% static 'img/main.jpg' %}" width="550px" height="550px" alt=""/></span> 
+            <h3><strong>This Cat is so Cute</strong> <br>You can scroll down if you want to see me more!</h3>
+        </div>
 
-<span>span 태그1</span> 
-<span>span 태그2</span>
+        <div id="About" class="listItem">
+            <h1> About </h1>
+            <div>
+               <img class = "profile" src ="{% static 'img/2.jpg' %}" alt="" width="300px" height="300px">
+                <div class="AboutContents">
+                    <h2>
+                        <strong>Lorem ipsum dolor sit amet <br>Lorem ipsum dolors</strong>
+                    </h2>
+                    <h3 > 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                        Repudiandae a tempora quis soluta, ratione architecto!<br>
+                        Facere, possimus modi ducimus perspiciatis nostrum<br>
+                        dolorum id voluptatum fuga totam sint harum. Quae, nemo!<br>
+                        Repudiandae a tempora quis soluta, ratione architecto!<br>
+                        Facere, possimus modi ducimus perspiciatis nostrum<br>
+                        dolorum id voluptatum fuga totam sint harum. Quae, nemo!<br>
+                    </h3>
+                </div>
+             </div>
+        </div>
+  
+        <div id="Gallery" class="listItem">
+            <h1> Gallery  </h1>
+            <div>
+                <div class="GalleryItems">
+                    <img class = "grid_item" src="{% static 'img/3-1.jpg' %}" alt="">
+                    <img class = "grid_item" src="{% static 'img/3-2.jpg' %}" alt="">
+                    <img class = "grid_item" src="{% static 'img/3-3.jpg' %}" alt="">
+                    <img class = "grid_item" src="{% static 'img/3-4.jpg' %}" alt="">
+                    <img class = "grid_item" src="{% static 'img/3-1.jpg' %}" alt="">
+                    <img class = "grid_item" src="{% static 'img/3-2.jpg' %}" alt="">
+                    <img class = "grid_item" src="{% static 'img/3-3.jpg' %}" alt="">
+                    <img class = "grid_item" src="{% static 'img/3-4.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
 
-
-<div>안녕하세요</div>
-<div>두번째 
-
-<h1>h1</h1>
-<h2>h2</h2>
-<h3>h3</h3>
-<h4>h4</h4>
-<h5>h5</h5>
-<h6>h6</h6>
-
-<!-- {% load static %}
-<img src="{%static 'IU.jpg'%}" alt="iu"> -->
-<img src="../../static/IU.jpg" alt="iu">
-
-<span>span 태그1</span> 
-<span>span 태그2</span>
-
-
-<div>안녕하세요</div>
-<div>두번째 영역입니다</div>
-
-<a href="https://www.google.com" target="_blank">Google Link</a>
-
+        <div id="Contact" class="listItem">
+            <h1> Contact </h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0xJxgvJO2Xo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="ContactLinkWrapper">
+                <a href="https://velog.io/" class="ContactLink">Blog</a>
+                <a href="mailto:gmail.com" class="ContactLink">Gmail</a>
+                <a href="https://github.com/" class="ContactLink">Github</a>
+            </div>
+            <div>
+                This is my favorite Music.
+            </div>
+        </div>
+        <footer>
+            This site is a learning page through Django.
+        </footer>
+    <div>
 </body>
-</html> 
+</html>
